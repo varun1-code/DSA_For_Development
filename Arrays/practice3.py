@@ -1,4 +1,5 @@
 #find maximum and minum in array
+'''
 def find_max_min():
     arr=[]
     x=int(input("enter the number of elments:"))
@@ -13,7 +14,22 @@ def find_max_min():
 minimum,maximum,array=find_max_min()
 print("minimum is:",minimum)
 print("maximum is:",maximum)
-print("sorted array is:",array)
+print("sorted array is:",array)'''
 #-----------------------------------------------------------------------------
-
-    
+#optimised search solution 
+def find_max_min():
+    arr=[]
+    x=int(input("enter the number of elments:"))
+    for i in range(x):
+        element=int(input("enter the elemensts:"))
+        arr.append(element)
+    min=arr[0]
+    max=arr[0]
+    for i in  arr:
+        if i>max:
+            max=i
+        if i<min:
+            min=i
+    return min,max
+min,max=find_max_min()
+print(f"minimum is {min},maximum is {max}")
