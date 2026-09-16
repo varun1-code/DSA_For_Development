@@ -19,6 +19,9 @@ The current practice is focused on array-based interview problems.
 | `p3.py` | Array Practice | Array traversal and problem solving |
 | `p4.py` | Array Practice | Array traversal and problem solving |
 | `Duplication.py` | Duplicate-related array problem | Array traversal / duplicate detection |
+| `p5_largest_element.py` | Find the Largest Element | Running maximum, O(n) |
+| `p6_max_sum_three_consecutive.py` | Maximum Sum of Three Consecutive Elements | Consecutive elements, running sum, O(n) |
+| `p7_maximum_subarray_kadane.py` | Maximum Subarray — Kadane's Algorithm | Running sum, restart decision, O(n) |
 
 ## 🧠 Problems Completed
 
@@ -43,7 +46,7 @@ for num in nums:
 - Time: `O(n)`
 - Space: `O(1)`
 
-The implementation also handles arrays with fewer than two elements and cases where a distinct second-largest value does not exist. fileciteturn5file0
+The implementation also handles arrays with fewer than two elements and cases where a distinct second-largest value does not exist.
 
 ---
 
@@ -86,7 +89,112 @@ for i in range(1, len(prices)):
 | Brute Force | `O(n²)` | `O(1)` |
 | Optimized | `O(n)` | `O(1)` |
 
-The optimized solution reduces the nested-loop approach to a single traversal while preserving constant auxiliary space. fileciteturn6file0
+---
+
+### 3. Find the Largest Element
+
+Given an integer array, find the largest element.
+
+The solution keeps track of the largest value seen so far during one traversal.
+
+```python
+largest = nums[0]
+
+for i in range(1, len(nums)):
+    if largest < nums[i]:
+        largest = nums[i]
+```
+
+**Complexity:**
+- Time: `O(n)`
+- Space: `O(1)`
+
+---
+
+### 4. Maximum Sum of Three Consecutive Elements
+
+Given an integer array, find the maximum sum of any three consecutive elements.
+
+The practice solution maintains the previous element and calculates each group of three consecutive values.
+
+Example:
+
+```text
+[2, 5, 1, 8, 3, 7]
+
+2 + 5 + 1 = 8
+5 + 1 + 8 = 14
+1 + 8 + 3 = 12
+8 + 3 + 7 = 18
+```
+
+Answer: `18`
+
+**Complexity:**
+- Time: `O(n)`
+- Space: `O(1)`
+
+This exercise builds the running-sum intuition needed for more advanced array problems.
+
+---
+
+### 5. Maximum Subarray — Kadane's Algorithm
+
+Given an integer array, find the contiguous subarray containing at least one number with the largest sum.
+
+Example:
+
+```python
+arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+```
+
+The maximum-sum subarray is:
+
+```text
+[4, -1, 2, 1]
+```
+
+with sum:
+
+```text
+4 - 1 + 2 + 1 = 6
+```
+
+#### Core idea
+
+At every element, there are two choices:
+
+1. Start a new subarray at the current element.
+2. Continue the previous subarray by adding the current element.
+
+```python
+current_sum = max(arr[i], current_sum + arr[i])
+maximum_sum = max(maximum_sum, current_sum)
+```
+
+`current_sum` represents the maximum sum of a subarray that **ends at the current index**.
+
+If continuing the previous subarray is worse than starting from the current element, we start fresh. We do not actually create a new array; only the running sum changes.
+
+#### Trace
+
+```text
+Start: -2
+1:      1
+-3:    -2
+4:      4   ← start fresh
+-1:     3
+2:      5
+1:      6   ← maximum
+-5:     1
+4:      5
+```
+
+**Complexity:**
+- Time: `O(n)`
+- Space: `O(1)`
+
+> Important: use `range(1, len(arr))` so the final element is processed.
 
 ---
 
