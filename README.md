@@ -27,6 +27,7 @@ The current practice is focused on array-based interview problems.
 | [`p7_maximum_subarray_kadane.py`](Array/p7_maximum_subarray_kadane.py) | Maximum Subarray — Kadane's Algorithm | Running sum, restart decision, O(n) |
 | [`p8_remove_duplicates_sorted_array.py`](Array/p8_remove_duplicates_sorted_array.py) | Remove Duplicates from Sorted Array | Two pointers, in-place dedupe, O(n) |
 | [`p9_two_sum.py`](Array/p9_two_sum.py) | Two Sum | Hash map lookup, O(n) |
+| [`p10_two_sum_sorted.py`](Array/p10_two_sum_sorted.py) | Two Sum — Sorted Array | Two pointers, O(n) |
 
 ## 🎯 Practice Strategy
 
