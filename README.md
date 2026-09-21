@@ -29,6 +29,27 @@ The current practice is focused on array-based interview problems.
 | [`p9_two_sum.py`](Array/p9_two_sum.py) | Two Sum | Hash map lookup, O(n) |
 | [`p10_two_sum_sorted.py`](Array/p10_two_sum_sorted.py) | Two Sum — Sorted Array | Two pointers, O(n) |
 
+### Strings
+
+String Week follows the same daily-problem approach used for arrays.
+
+| Day | Focus | Level |
+|---|---|---|
+| Monday | String basics + traversal + frequency counting | Easy |
+| Tuesday | Reverse, palindrome, anagram | Easy |
+| Wednesday | Two pointers + sliding window | Easy/Medium |
+| Thursday | Hashing + character frequency patterns | Medium |
+| Friday | Substrings + longest/shortest patterns | Medium |
+| Saturday | Mixed interview problems | Medium |
+| Sunday | Revision + timed test | Mixed |
+
+📁 `Strings/`
+
+| File | Problem / Focus | Key Concepts |
+|---|---|---|
+| [`p1_palindrome_check.py`](Strings/p1_palindrome_check.py) | Palindrome Check | Two pointers, O(n) |
+| [`p2_anagram_check.py`](Strings/p2_anagram_check.py) | Valid Anagram | Hash map frequency count, length early-exit, O(n) |
+
 ## 🎯 Practice Strategy
 
 The goal is to solve DSA problems consistently rather than only memorize solutions.
