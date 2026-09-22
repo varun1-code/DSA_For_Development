@@ -30,25 +30,23 @@ Space Complexity: O(n)
 """
 
 def first_non_repeating(x):
-"""Time: O(n), Space: O(n) - frequency dictionary."""
-
-
-freq = {}
+    freq = {}
+#"""Time: O(n), Space: O(n) - frequency dictionary."""freq = {}
 
 # Count the frequency of every character
-for ch in x:
-    if ch in freq:
-        freq[ch] += 1
-    else:
-        freq[ch] = 1
+    for ch in x:
+        if ch in freq:
+            freq[ch] += 1
+        else:
+            freq[ch] = 1
 
 # Find the first character with frequency 1
-for key, value in freq.items():
-    if value == 1:
-        return key
+    for key, value in freq.items():
+        if value == 1:
+            return key
 
 # No non-repeating character found
-return None
+    return None
 
 
 print(first_non_repeating("swiss"))      # w
