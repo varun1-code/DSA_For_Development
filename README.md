@@ -31,17 +31,6 @@ The current practice is focused on array-based interview problems.
 
 ### Strings
 
-String Week follows the same daily-problem approach used for arrays.
-
-| Day | Focus | Level |
-|---|---|---|
-| Monday | String basics + traversal + frequency counting | Easy |
-| Tuesday | Reverse, palindrome, anagram | Easy |
-| Wednesday | Two pointers + sliding window | Easy/Medium |
-| Thursday | Hashing + character frequency patterns | Medium |
-| Friday | Substrings + longest/shortest patterns | Medium |
-| Saturday | Mixed interview problems | Medium |
-| Sunday | Revision + timed test | Mixed |
 
 📁 `Strings/`
 
@@ -49,6 +38,7 @@ String Week follows the same daily-problem approach used for arrays.
 |---|---|---|
 | [`p1_palindrome_check.py`](Strings/p1_palindrome_check.py) | Palindrome Check | Two pointers, O(n) |
 | [`p2_anagram_check.py`](Strings/p2_anagram_check.py) | Valid Anagram | Hash map frequency count, length early-exit, O(n) |
+| ['p3_first_non_repeating_character.py'](Strings/p3_Frist_Non-Repeating_Character.py) | First Non-Repeating |Character | Hash map frequency count, dictionary order, O(n)|
 
 ## 🎯 Practice Strategy
 
