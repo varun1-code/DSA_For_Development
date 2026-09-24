@@ -39,7 +39,7 @@ The current practice is focused on array-based interview problems.
 | [`p1_palindrome_check.py`](Strings/p1_palindrome_check.py) | Palindrome Check | Two pointers, O(n) |
 | [`p2_anagram_check.py`](Strings/p2_anagram_check.py) | Valid Anagram | Hash map frequency count, length early-exit, O(n) |
 | [`p3_first_non_repeating_character.py`](Strings/p3_Frist_Non-Repeating_Character.py) | First Non-Repeating Character | Hash map frequency count, dictionary order, O(n)|
-
+| [`p4_longest_substring_without_repeating.py`](Strings/p4_longest_substring_without_repeating.py) | Longest Substring Without Repeating Characters | Sliding window, set, two pointers, O(n) |
 ## 🎯 Practice Strategy
 
 The goal is to solve DSA problems consistently rather than only memorize solutions.
